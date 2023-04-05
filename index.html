@@ -1,171 +1,144 @@
 <html>
-
-<head>
+  <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <meta
+      name="viewport"
+      content="initial-scale=1, maximum-scale=1, user-scalable=no"
+    />
     <title>ArcGIS API for JavaScript Tutorials: Display a map</title>
 
     <style>
-        html,
-        body,
-        #viewDiv {
-            padding: 0;
-            margin: 0;
-            height: 100%;
-            width: 100%;
-        }
+      html,
+      body,
+      #viewDiv {
+        padding: 0;
+        margin: 0;
+        height: 100%;
+        width: 100%;
+      }
     </style>
 
-    <link rel="stylesheet" href="https://js.arcgis.com/4.21/esri/themes/light/main.css">
+    <link
+      rel="stylesheet"
+      href="https://js.arcgis.com/4.21/esri/themes/light/main.css"
+    />
     <script src="https://js.arcgis.com/4.21/"></script>
 
     <script>
-        require(["esri/config", "esri/Map", "esri/views/SceneView", "esri/views/MapView", "esri/layers/FeatureLayer", "esri/Graphic", "esri/renderers/Renderer", "esri/symbols/SimpleMarkerSymbol", "esri/renderers/SimpleRenderer", "esri/geometry/Point", "esri/PopupTemplate", "esri/renderers/ClassBreaksRenderer", "esri/renderers/support/ClassBreakInfo", "esri/symbols/CIMSymbol"], function(esriConfig,
-                                                                                                                                                                                                                                                                                                                                                                                                     Map, SceneView, MapView,
-                                                                                                                                                                                                                                                                                                                                                                                                     FeatureLayer, Graphic, Renderer, SimpleRenderer, SimpleMarkerSymbol, Point, PopupTemplate, ClassBreakRenderer, ClassBreakInfo, CIMSymbol) {
-            esriConfig.fontsUrl = './assets/font/';
-            const map = new Map({
-                basemap: "topo" // Basemap layer service
-            });
-            const view = new MapView({
-                map: map,
-                center: [4.308342, 51.27658], // Longitude, latitude
-                zoom: 13, // Zoom level
-                container: "viewDiv" // Div element
-            });
-            const graphic1 = new Graphic({
-                ObjectID: 1,
-                attributes: {
-                    length: 100
-                },
-                geometry: {
-                    type: 'point',
-                    x: 4.308342,
-                    y: 51.27658
-                }
-            });
-            const graphic2 = new Graphic({
-                ObjectID: 2,
-                attributes: {
-                    length: 10
-                },
-                geometry: {
-                    type: 'point',
-                    x: 4.304352,
-                    y: 51.24758
-                }
-            });
-            const layer = new FeatureLayer({
-                id: 'layer',
-                source: [graphic1, graphic2],
-                objectIdField: "ObjectID",
-                geometryType: "point",
-                fields: [{
-                    name: "ObjectID",
-                    alias: "ObjectID",
-                    type: "oid"
-                }, {
-                    name: "length",
-                    alias: "Length",
-                    type: "integer"
-                },
-                    {
-                        name: "cluster_count",
-                        type: "integer"
-                    }
-                ],
-                renderer: {
-                    "id": "DUKDALF_SIMPLE_CIM_RENDERER",
-                    "type": "simple",
-                    "symbol": {
-                        "type": "cim",
-                        "data": {
-                            "type": "CIMSymbolReference",
-                            "symbol": {
-                                "type": "CIMPointSymbol",
-                                "symbolLayers": [{
-                                    "type": "CIMVectorMarker",
-                                    "enable": true,
-                                    "anchorPoint": {
-                                        "x": 0,
-                                        "y": 0
-                                    },
-                                    "anchorPointUnits": "Relative",
-                                    "size": 40,
-                                    "frame": {
-                                        "xmin": -20,
-                                        "ymin": -20,
-                                        "xmax": 20,
-                                        "ymax": 20
-                                    },
-                                    "markerGraphics": [{
-                                        "type": "CIMMarkerGraphic",
-                                        "geometry": {
-                                            "x": 0,
-                                            "y": 0
-                                        },
-                                        "textString": "\ue922",
-                                        "symbol": {
-                                            "type": "CIMTextSymbol",
-                                            "fontFamilyName": "calibri-font",
-                                            "height": 40,
-                                            "horizontalAlignment": "Center",
-                                            "symbol": {
-                                                "type": "CIMPolygonSymbol",
-                                                "symbolLayers": [{
-                                                    "type": "CIMSolidFill",
-                                                    "enable": true,
-                                                    "color": [
-                                                        27,
-                                                        36,
-                                                        61,
-                                                        255
-                                                    ]
-                                                }]
-                                            },
-                                            "verticalAlignment": "Center"
-                                        }
-                                    }],
-                                    "scaleSymbolsProportionally": true,
-                                    "respectFrame": true,
-                                    "colorLocked": false,
-                                    "markerPlacement": {
-                                        "type": "CIMMarkerPlacementPolygonCenter",
-                                        "method": "OnPolygon",
-                                        "offsetX": 0,
-                                        "offsetY": 0,
-                                        "clipAtBoundary": false
-                                    }
-                                },
-                                    {
-                                        "type": "CIMSolidFill",
-                                        "enable": true,
-                                        "colorLocked": true,
-                                        "color": [
-                                            0,
-                                            255,
-                                            0,
-                                            0
-                                        ]
-                                    }
-                                ]
-                            }
-                        }
-                    }
-                },
-                popupTemplate: {
-                    title: "{ObjectId} | {length}",
-                },
-            });
-            view.map.layers.add(layer);
-            console.log(view.map.layers);
+      require([
+        'esri/config',
+        'esri/Map',
+        'esri/views/SceneView',
+        'esri/views/MapView',
+        'esri/layers/FeatureLayer',
+        'esri/Graphic',
+        'esri/renderers/Renderer',
+        'esri/symbols/SimpleMarkerSymbol',
+        'esri/renderers/SimpleRenderer',
+        'esri/geometry/Point',
+        'esri/PopupTemplate',
+        'esri/renderers/ClassBreaksRenderer',
+        'esri/renderers/support/ClassBreakInfo',
+        'esri/symbols/CIMSymbol',
+      ], function (
+        esriConfig,
+        Map,
+        SceneView,
+        MapView,
+        FeatureLayer,
+        Graphic,
+        Renderer,
+        SimpleRenderer,
+        SimpleMarkerSymbol,
+        Point,
+        PopupTemplate,
+        ClassBreakRenderer,
+        ClassBreakInfo,
+        CIMSymbol
+      ) {
+        esriConfig.fontsUrl = './assets/font/';
+        console.log('esriConfig', esriConfig);
+        const map = new Map({
+          basemap: 'topo', // Basemap layer service
         });
+        const view = new MapView({
+          map: map,
+          center: [4.308342, 51.27658], // Longitude, latitude
+          zoom: 13, // Zoom level
+          container: 'viewDiv', // Div element
+        });
+        const graphic1 = new Graphic({
+          ObjectID: 1,
+          attributes: {
+            length: 100,
+          },
+          geometry: {
+            type: 'point',
+            x: 4.308342,
+            y: 51.27658,
+          },
+        });
+        const graphic2 = new Graphic({
+          ObjectID: 2,
+          attributes: {
+            length: 10,
+          },
+          geometry: {
+            type: 'point',
+            x: 4.304352,
+            y: 51.24758,
+          },
+        });
+        const layer = new FeatureLayer({
+          id: 'layer',
+          source: [graphic1, graphic2],
+          objectIdField: 'ObjectID',
+          geometryType: 'point',
+          fields: [
+            {
+              name: 'ObjectID',
+              alias: 'ObjectID',
+              type: 'oid',
+            },
+            {
+              name: 'length',
+              alias: 'Length',
+              type: 'integer',
+            },
+            {
+              name: 'cluster_count',
+              type: 'integer',
+            },
+          ],
+          renderer: {
+            id: 'DUKDALF_SIMPLE_CIM_RENDERER',
+            type: 'simple',
+            symbol: {
+              type: 'text', // autocasts as new TextSymbol()
+              color: 'white',
+              haloColor: 'black',
+              haloSize: '5px',
+              text: 'O',
+              xoffset: 3,
+              yoffset: 3,
+              font: {
+                // autocasts as new Font()
+                size: 12,
+                weight: 'bold',
+              },
+            },
+          },
+          popupTemplate: {
+            title: '{ObjectId} | {length}',
+          },
+        });
+        view.map.layers.add(layer);
+        console.log(view.map.layers);
+      });
     </script>
+  </head>
 
-</head>
-
-<body>
-<div id="viewDiv"></div>
-</body>
-
+  <body>
+    <div id="viewDiv"></div>
+  </body>
 </html>
