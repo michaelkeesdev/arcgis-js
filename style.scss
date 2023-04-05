@@ -1,0 +1,951 @@
+$apica-font-family: "apica-font" !default;
+$apica-font-path: "fonts" !default;
+
+$apica-eye-hide: "\e966";
+$apica-eye-show: "\e967";
+$apica-under-construction1: "\e968";
+$apica-fuel-true: "\e969";
+$apica-fuel-false: "\e96a";
+$apica-hexa: "\e952";
+$apica-spud-poles-path1: "\e953";
+$apica-spud-poles-path2: "\e954";
+$apica-spud-poles-path3: "\e955";
+$apica-achterkaai-path1: "\e956";
+$apica-achterkaai-path2: "\e957";
+$apica-Quay: "\e958";
+$apica-blasting-work: "\e959";
+$apica-dive-work: "\e95a";
+$apica-hot-work: "\e95b";
+$apica-nautical-permits: "\e95c";
+$apica-meren-laag: "\e95d";
+$apica-wachtkade: "\e95e";
+$apica-schilderwerken: "\e95f";
+$apica-lifeboattest: "\e960";
+$apica-bunkeren: "\e961";
+$apica-doorvaartbeperking: "\e962";
+$apica-immobilisatie: "\e963";
+$apica-marker-bridge-closed: "\e92a";
+$apica-marker-bridge-open: "\e929";
+$apica-marker-center: "\e928";
+$apica-marker-back: "\e927";
+$apica-analytics: "\e97a";
+$apica-ais_bold: "\e978";
+$apica-virtual_ais_bold: "\e979";
+$apica-VirtualAIS-2: "\e976";
+$apica-AIS-1: "\e977";
+$apica-radar: "\e975";
+$apica-NB-mededeling: "\e971";
+$apica-NB-annulatie: "\e972";
+$apica-NB-informatie: "\e973";
+$apica-NB-waarschuwing: "\e974";
+$apica-goto: "\e96f";
+$apica-pin: "\e970";
+$apica-windmill: "\e96e";
+$apica-filter-active-path1: "\e96b";
+$apica-filter-active-path2: "\e96c";
+$apica-layers: "\e96d";
+$apica-i-nose-path1: "\e92c";
+$apica-i-nose-path2: "\e964";
+$apica-windy2: "\e935";
+$apica-comp: "\e945";
+$apica-hpa: "\e94a";
+$apica-drop: "\e94c";
+$apica-temp: "\e900";
+$apica-terrain: "\e965";
+$apica-iNose: "\e951";
+$apica-bollard: "\e92b";
+$apica-building: "\e930";
+$apica-dock: "\e931";
+$apica-driftwood: "\e932";
+$apica-drinking-water: "\e933";
+$apica-fence: "\e934";
+$apica-Frame-33: "\e936";
+$apica-gate: "\e937";
+$apica-haalkom: "\e938";
+$apica-Ladder: "\e939";
+$apica-lighting: "\e93a";
+$apica-lighting-2-path1: "\e93b";
+$apica-lighting-2-path2: "\e93c";
+$apica-lighting-2-path3: "\e93d";
+$apica-lighting-2-path4: "\e93e";
+$apica-lighting-2-path5: "\e93f";
+$apica-lighting-2-path6: "\e940";
+$apica-lighting-2-path7: "\e941";
+$apica-lock: "\e942";
+$apica-pipe: "\e943";
+$apica-quay-wall: "\e944";
+$apica-safety-ring: "\e946";
+$apica-scaffold: "\e947";
+$apica-sewage: "\e948";
+$apica-shore: "\e949";
+$apica-tech-water: "\e94b";
+$apica-waste-disposal-site: "\e94d";
+$apica-vessel: "\e94e";
+$apica-vessel-2: "\e94f";
+$apica-rainy: "\e919";
+$apica-wind-NO: "\e923";
+$apica-windy: "\e924";
+$apica-more: "\e901";
+$apica-play: "\e902";
+$apica-playx10: "\e903";
+$apica-replay: "\e904";
+$apica-replayx10: "\e905";
+$apica-delete: "\e906";
+$apica-plugged-false: "\e907";
+$apica-plugged-true: "\e908";
+$apica-add-bookmark: "\e909";
+$apica-bridge-closed-path1: "\e90a";
+$apica-bridge-closed-path2: "\e950";
+$apica-bridge-open-path1: "\e90b";
+$apica-bridge-open-path2: "\e90c";
+$apica-camera: "\e90d";
+$apica-fender: "\e90e";
+$apica-filter: "\e90f";
+$apica-fullscreen: "\e910";
+$apica-fullscreen-exit: "\e911";
+$apica-bollard1: "\e912";
+$apica-mode-dark: "\e913";
+$apica-mode-light: "\e914";
+$apica-my-location: "\e915";
+$apica-notifications: "\e916";
+$apica-notifications-new-path1: "\e917";
+$apica-notifications-new-path2: "\e918";
+$apica-reddingkast: "\e91a";
+$apica-ships: "\e91b";
+$apica-sluis: "\e91c";
+$apica-status-nok: "\e91d";
+$apica-status-ok: "\e91e";
+$apica-terrain-view: "\e91f";
+$apica-timestamp: "\e920";
+$apica-under-construction: "\e921";
+$apica-walstroomkast: "\e922";
+$apica-zoom-in: "\e925";
+$apica-zoom-out: "\e926";
+$apica-home: "\e92f";
+$apica-pause_circle_filled: "\e92d";
+$apica-play_arrow: "\e92e";
+
+@font-face {
+  font-family: '#{$apica-font-family}';
+  src: url('#{$apica-font-path}/#{$apica-font-family}.woff2?bymcz0') format('woff2'),
+  url('#{$apica-font-path}/#{$apica-font-family}.ttf?bymcz0') format('truetype'),
+  url('#{$apica-font-path}/#{$apica-font-family}.woff?bymcz0') format('woff'),
+  url('#{$apica-font-path}/#{$apica-font-family}.svg?bymcz0##{$apica-font-family}') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="apica-"], [class*=" apica-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: '#{$apica-font-family}' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.apica-eye-hide {
+&:before {
+   content: $apica-eye-hide;
+ }
+}
+
+.apica-eye-show {
+&:before {
+   content: $apica-eye-show;
+ }
+}
+
+.apica-under-construction1 {
+&:before {
+   content: $apica-under-construction1;
+ }
+}
+
+.apica-fuel-true {
+&:before {
+   content: $apica-fuel-true;
+ }
+}
+
+.apica-fuel-false {
+&:before {
+   content: $apica-fuel-false;
+ }
+}
+
+.apica-hexa {
+&:before {
+   content: $apica-hexa;
+   color: #ba122b;
+ }
+}
+
+.apica-spud-poles .path1 {
+&:before {
+   content: $apica-spud-poles-path1;
+   color: rgb(255, 255, 255);
+   opacity: 0.5;
+ }
+}
+
+.apica-spud-poles .path2 {
+&:before {
+   content: $apica-spud-poles-path2;
+   margin-left: -1em;
+   color: rgb(255, 255, 255);
+ }
+}
+
+.apica-spud-poles .path3 {
+&:before {
+   content: $apica-spud-poles-path3;
+   margin-left: -1em;
+   color: rgb(255, 255, 255);
+ }
+}
+
+.apica-achterkaai .path1 {
+&:before {
+   content: $apica-achterkaai-path1;
+   color: rgb(255, 255, 255);
+ }
+}
+
+.apica-achterkaai .path2 {
+&:before {
+   content: $apica-achterkaai-path2;
+   margin-left: -1em;
+   color: rgb(255, 255, 255);
+   opacity: 0.64;
+ }
+}
+
+.apica-Quay {
+&:before {
+   content: $apica-Quay;
+   color: #fff;
+ }
+}
+
+.apica-blasting-work {
+&:before {
+   content: $apica-blasting-work;
+   color: #fff;
+ }
+}
+
+.apica-dive-work {
+&:before {
+   content: $apica-dive-work;
+   color: #fff;
+ }
+}
+
+.apica-hot-work {
+&:before {
+   content: $apica-hot-work;
+   color: #fff;
+ }
+}
+
+.apica-nautical-permits {
+&:before {
+   content: $apica-nautical-permits;
+   color: #fff;
+ }
+}
+
+.apica-meren-laag {
+&:before {
+   content: $apica-meren-laag;
+   color: #fff;
+ }
+}
+
+.apica-wachtkade {
+&:before {
+   content: $apica-wachtkade;
+   color: #fff;
+ }
+}
+
+.apica-schilderwerken {
+&:before {
+   content: $apica-schilderwerken;
+   color: #fff;
+ }
+}
+
+.apica-lifeboattest {
+&:before {
+   content: $apica-lifeboattest;
+   color: #fff;
+ }
+}
+
+.apica-bunkeren {
+&:before {
+   content: $apica-bunkeren;
+   color: #fff;
+ }
+}
+
+.apica-doorvaartbeperking {
+&:before {
+   content: $apica-doorvaartbeperking;
+   color: #fff;
+ }
+}
+
+.apica-immobilisatie {
+&:before {
+   content: $apica-immobilisatie;
+   color: #fff;
+ }
+}
+
+.apica-marker-bridge-closed {
+&:before {
+   content: $apica-marker-bridge-closed;
+ }
+}
+
+.apica-marker-bridge-open {
+&:before {
+   content: $apica-marker-bridge-open;
+ }
+}
+
+.apica-marker-center {
+&:before {
+   content: $apica-marker-center;
+ }
+}
+
+.apica-marker-back {
+&:before {
+   content: $apica-marker-back;
+ }
+}
+
+.apica-analytics {
+&:before {
+   content: $apica-analytics;
+ }
+}
+
+.apica-ais_bold {
+&:before {
+   content: $apica-ais_bold;
+ }
+}
+
+.apica-virtual_ais_bold {
+&:before {
+   content: $apica-virtual_ais_bold;
+ }
+}
+
+.apica-VirtualAIS-2 {
+&:before {
+   content: $apica-VirtualAIS-2;
+ }
+}
+
+.apica-AIS-1 {
+&:before {
+   content: $apica-AIS-1;
+ }
+}
+
+.apica-radar {
+&:before {
+   content: $apica-radar;
+ }
+}
+
+.apica-NB-mededeling {
+&:before {
+   content: $apica-NB-mededeling;
+ }
+}
+
+.apica-NB-annulatie {
+&:before {
+   content: $apica-NB-annulatie;
+ }
+}
+
+.apica-NB-informatie {
+&:before {
+   content: $apica-NB-informatie;
+ }
+}
+
+.apica-NB-waarschuwing {
+&:before {
+   content: $apica-NB-waarschuwing;
+ }
+}
+
+.apica-goto {
+&:before {
+   content: $apica-goto;
+ }
+}
+
+.apica-pin {
+&:before {
+   content: $apica-pin;
+ }
+}
+
+.apica-windmill {
+&:before {
+   content: $apica-windmill;
+ }
+}
+
+.apica-filter-active .path1 {
+&:before {
+   content: $apica-filter-active-path1;
+   color: rgb(27, 36, 61);
+ }
+}
+
+.apica-filter-active .path2 {
+&:before {
+   content: $apica-filter-active-path2;
+   margin-left: -0.9580078125em;
+   color: rgb(102, 204, 255);
+ }
+}
+
+.apica-layers {
+&:before {
+   content: $apica-layers;
+ }
+}
+
+.apica-i-nose .path1 {
+&:before {
+   content: $apica-i-nose-path1;
+   color: rgb(27, 36, 61);
+ }
+}
+
+.apica-i-nose .path2 {
+&:before {
+   content: $apica-i-nose-path2;
+   margin-left: -1em;
+   color: rgb(27, 36, 61);
+   opacity: 0.48;
+ }
+}
+
+.apica-windy2 {
+&:before {
+   content: $apica-windy2;
+ }
+}
+
+.apica-comp {
+&:before {
+   content: $apica-comp;
+ }
+}
+
+.apica-hpa {
+&:before {
+   content: $apica-hpa;
+ }
+}
+
+.apica-drop {
+&:before {
+   content: $apica-drop;
+ }
+}
+
+.apica-temp {
+&:before {
+   content: $apica-temp;
+ }
+}
+
+.apica-terrain {
+&:before {
+   content: $apica-terrain;
+ }
+}
+
+.apica-iNose {
+&:before {
+   content: $apica-iNose;
+ }
+}
+
+.apica-bollard {
+&:before {
+   content: $apica-bollard;
+ }
+}
+
+.apica-building {
+&:before {
+   content: $apica-building;
+ }
+}
+
+.apica-dock {
+&:before {
+   content: $apica-dock;
+ }
+}
+
+.apica-driftwood {
+&:before {
+   content: $apica-driftwood;
+ }
+}
+
+.apica-drinking-water {
+&:before {
+   content: $apica-drinking-water;
+ }
+}
+
+.apica-fence {
+&:before {
+   content: $apica-fence;
+ }
+}
+
+.apica-Frame-33 {
+&:before {
+   content: $apica-Frame-33;
+ }
+}
+
+.apica-gate {
+&:before {
+   content: $apica-gate;
+ }
+}
+
+.apica-haalkom {
+&:before {
+   content: $apica-haalkom;
+ }
+}
+
+.apica-Ladder {
+&:before {
+   content: $apica-Ladder;
+ }
+}
+
+.apica-lighting {
+&:before {
+   content: $apica-lighting;
+ }
+}
+
+.apica-lighting-2 .path1 {
+&:before {
+   content: $apica-lighting-2-path1;
+   color: rgb(27, 36, 61);
+ }
+}
+
+.apica-lighting-2 .path2 {
+&:before {
+   content: $apica-lighting-2-path2;
+   margin-left: -1em;
+   color: rgb(27, 36, 61);
+ }
+}
+
+.apica-lighting-2 .path3 {
+&:before {
+   content: $apica-lighting-2-path3;
+   margin-left: -1em;
+   color: rgb(27, 36, 61);
+   opacity: 0.64;
+ }
+}
+
+.apica-lighting-2 .path4 {
+&:before {
+   content: $apica-lighting-2-path4;
+   margin-left: -1em;
+   color: rgb(27, 36, 61);
+   opacity: 0.64;
+ }
+}
+
+.apica-lighting-2 .path5 {
+&:before {
+   content: $apica-lighting-2-path5;
+   margin-left: -1em;
+   color: rgb(27, 36, 61);
+   opacity: 0.64;
+ }
+}
+
+.apica-lighting-2 .path6 {
+&:before {
+   content: $apica-lighting-2-path6;
+   margin-left: -1em;
+   color: rgb(27, 36, 61);
+   opacity: 0.64;
+ }
+}
+
+.apica-lighting-2 .path7 {
+&:before {
+   content: $apica-lighting-2-path7;
+   margin-left: -1em;
+   color: rgb(27, 36, 61);
+   opacity: 0.64;
+ }
+}
+
+.apica-lock {
+&:before {
+   content: $apica-lock;
+ }
+}
+
+.apica-pipe {
+&:before {
+   content: $apica-pipe;
+ }
+}
+
+.apica-quay-wall {
+&:before {
+   content: $apica-quay-wall;
+ }
+}
+
+.apica-safety-ring {
+&:before {
+   content: $apica-safety-ring;
+ }
+}
+
+.apica-scaffold {
+&:before {
+   content: $apica-scaffold;
+ }
+}
+
+.apica-sewage {
+&:before {
+   content: $apica-sewage;
+ }
+}
+
+.apica-shore {
+&:before {
+   content: $apica-shore;
+ }
+}
+
+.apica-tech-water {
+&:before {
+   content: $apica-tech-water;
+ }
+}
+
+.apica-waste-disposal-site {
+&:before {
+   content: $apica-waste-disposal-site;
+ }
+}
+
+.apica-vessel {
+&:before {
+   content: $apica-vessel;
+ }
+}
+
+.apica-vessel-2 {
+&:before {
+   content: $apica-vessel-2;
+ }
+}
+
+.apica-rainy {
+&:before {
+   content: $apica-rainy;
+ }
+}
+
+.apica-wind-NO {
+&:before {
+   content: $apica-wind-NO;
+ }
+}
+
+.apica-windy {
+&:before {
+   content: $apica-windy;
+ }
+}
+
+.apica-more {
+&:before {
+   content: $apica-more;
+ }
+}
+
+.apica-play {
+&:before {
+   content: $apica-play;
+ }
+}
+
+.apica-playx10 {
+&:before {
+   content: $apica-playx10;
+ }
+}
+
+.apica-replay {
+&:before {
+   content: $apica-replay;
+ }
+}
+
+.apica-replayx10 {
+&:before {
+   content: $apica-replayx10;
+ }
+}
+
+.apica-delete {
+&:before {
+   content: $apica-delete;
+   color: #ff4747;
+ }
+}
+
+.apica-plugged-false {
+&:before {
+   content: $apica-plugged-false;
+ }
+}
+
+.apica-plugged-true {
+&:before {
+   content: $apica-plugged-true;
+ }
+}
+
+.apica-add-bookmark {
+&:before {
+   content: $apica-add-bookmark;
+ }
+}
+
+.apica-bridge-closed .path1 {
+&:before {
+   content: $apica-bridge-closed-path1;
+   color: rgb(27, 36, 61);
+   opacity: 0.48;
+ }
+}
+
+.apica-bridge-closed .path2 {
+&:before {
+   content: $apica-bridge-closed-path2;
+   margin-left: -1em;
+   color: rgb(27, 36, 61);
+ }
+}
+
+.apica-bridge-open .path1 {
+&:before {
+   content: $apica-bridge-open-path1;
+   color: rgb(27, 36, 61);
+   opacity: 0.48;
+ }
+}
+
+.apica-bridge-open .path2 {
+&:before {
+   content: $apica-bridge-open-path2;
+   margin-left: -1em;
+   color: rgb(27, 36, 61);
+ }
+}
+
+.apica-camera {
+&:before {
+   content: $apica-camera;
+ }
+}
+
+.apica-fender {
+&:before {
+   content: $apica-fender;
+ }
+}
+
+.apica-filter {
+&:before {
+   content: $apica-filter;
+ }
+}
+
+.apica-fullscreen {
+&:before {
+   content: $apica-fullscreen;
+ }
+}
+
+.apica-fullscreen-exit {
+&:before {
+   content: $apica-fullscreen-exit;
+ }
+}
+
+.apica-bollard1 {
+&:before {
+   content: $apica-bollard1;
+ }
+}
+
+.apica-mode-dark {
+&:before {
+   content: $apica-mode-dark;
+ }
+}
+
+.apica-mode-light {
+&:before {
+   content: $apica-mode-light;
+ }
+}
+
+.apica-my-location {
+&:before {
+   content: $apica-my-location;
+ }
+}
+
+.apica-notifications {
+&:before {
+   content: $apica-notifications;
+ }
+}
+
+.apica-notifications-new .path1 {
+&:before {
+   content: $apica-notifications-new-path1;
+   color: rgb(27, 36, 61);
+ }
+}
+
+.apica-notifications-new .path2 {
+&:before {
+   content: $apica-notifications-new-path2;
+   margin-left: -1em;
+   color: rgb(255, 71, 71);
+ }
+}
+
+.apica-reddingkast {
+&:before {
+   content: $apica-reddingkast;
+ }
+}
+
+.apica-ships {
+&:before {
+   content: $apica-ships;
+ }
+}
+
+.apica-sluis {
+&:before {
+   content: $apica-sluis;
+ }
+}
+
+.apica-status-nok {
+&:before {
+   content: $apica-status-nok;
+ }
+}
+
+.apica-status-ok {
+&:before {
+   content: $apica-status-ok;
+ }
+}
+
+.apica-terrain-view {
+&:before {
+   content: $apica-terrain-view;
+ }
+}
+
+.apica-timestamp {
+&:before {
+   content: $apica-timestamp;
+ }
+}
+
+.apica-under-construction {
+&:before {
+   content: $apica-under-construction;
+ }
+}
+
+.apica-walstroomkast {
+&:before {
+   content: $apica-walstroomkast;
+ }
+}
+
+.apica-zoom-in {
+&:before {
+   content: $apica-zoom-in;
+ }
+}
+
+.apica-zoom-out {
+&:before {
+   content: $apica-zoom-out;
+ }
+}
+
+.apica-home {
+&:before {
+   content: $apica-home;
+ }
+}
+
+.apica-pause_circle_filled {
+&:before {
+   content: $apica-pause_circle_filled;
+ }
+}
+
+.apica-play_arrow {
+&:before {
+   content: $apica-play_arrow;
+ }
+}
+
