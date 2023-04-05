@@ -1,0 +1,590 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+
+
+html,
+body,
+#viewDiv {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+}
+
+@font-face {
+  font-family: 'apica-font';
+  src: url('src/assets/font/icon-font/apica-font.woff2?bymcz0') format('woff2'),
+  url('src/assets/font/icon-font/apica-font.ttf?bymcz0') format('truetype'),
+  url('src/assets/font/icon-font/apica-font.woff?bymcz0') format('woff'),
+  url('src/assets/font/icon-font/apica-font.svg?bymcz0#apica-font') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="apica-"], [class*=" apica-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'apica-font' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.apica-eye-hide:before {
+  content: "\e966";
+}
+
+.apica-eye-show:before {
+  content: "\e967";
+}
+
+.apica-under-construction1:before {
+  content: "\e968";
+}
+
+.apica-fuel-true:before {
+  content: "\e969";
+}
+
+.apica-fuel-false:before {
+  content: "\e96a";
+}
+
+.apica-hexa:before {
+  content: "\e952";
+  color: #ba122b;
+}
+
+.apica-spud-poles .path1:before {
+  content: "\e953";
+  color: rgb(255, 255, 255);
+  opacity: 0.5;
+}
+
+.apica-spud-poles .path2:before {
+  content: "\e954";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+
+.apica-spud-poles .path3:before {
+  content: "\e955";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+
+.apica-achterkaai .path1:before {
+  content: "\e956";
+  color: rgb(255, 255, 255);
+}
+
+.apica-achterkaai .path2:before {
+  content: "\e957";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+  opacity: 0.64;
+}
+
+.apica-Quay:before {
+  content: "\e958";
+  color: #fff;
+}
+
+.apica-blasting-work:before {
+  content: "\e959";
+  color: #fff;
+}
+
+.apica-dive-work:before {
+  content: "\e95a";
+  color: #fff;
+}
+
+.apica-hot-work:before {
+  content: "\e95b";
+  color: #fff;
+}
+
+.apica-nautical-permits:before {
+  content: "\e95c";
+  color: #fff;
+}
+
+.apica-meren-laag:before {
+  content: "\e95d";
+  color: #fff;
+}
+
+.apica-wachtkade:before {
+  content: "\e95e";
+  color: #fff;
+}
+
+.apica-schilderwerken:before {
+  content: "\e95f";
+  color: #fff;
+}
+
+.apica-lifeboattest:before {
+  content: "\e960";
+  color: #fff;
+}
+
+.apica-bunkeren:before {
+  content: "\e961";
+  color: #fff;
+}
+
+.apica-doorvaartbeperking:before {
+  content: "\e962";
+  color: #fff;
+}
+
+.apica-immobilisatie:before {
+  content: "\e963";
+  color: #fff;
+}
+
+.apica-marker-bridge-closed:before {
+  content: "\e92a";
+}
+
+.apica-marker-bridge-open:before {
+  content: "\e929";
+}
+
+.apica-marker-center:before {
+  content: "\e928";
+}
+
+.apica-marker-back:before {
+  content: "\e927";
+}
+
+.apica-analytics:before {
+  content: "\e97a";
+}
+
+.apica-ais_bold:before {
+  content: "\e978";
+}
+
+.apica-virtual_ais_bold:before {
+  content: "\e979";
+}
+
+.apica-VirtualAIS-2:before {
+  content: "\e976";
+}
+
+.apica-AIS-1:before {
+  content: "\e977";
+}
+
+.apica-radar:before {
+  content: "\e975";
+}
+
+.apica-NB-mededeling:before {
+  content: "\e971";
+}
+
+.apica-NB-annulatie:before {
+  content: "\e972";
+}
+
+.apica-NB-informatie:before {
+  content: "\e973";
+}
+
+.apica-NB-waarschuwing:before {
+  content: "\e974";
+}
+
+.apica-goto:before {
+  content: "\e96f";
+}
+
+.apica-pin:before {
+  content: "\e970";
+}
+
+.apica-windmill:before {
+  content: "\e96e";
+}
+
+.apica-filter-active .path1:before {
+  content: "\e96b";
+  color: rgb(27, 36, 61);
+}
+
+.apica-filter-active .path2:before {
+  content: "\e96c";
+  margin-left: -0.9580078125em;
+  color: rgb(102, 204, 255);
+}
+
+.apica-layers:before {
+  content: "\e96d";
+}
+
+.apica-i-nose .path1:before {
+  content: "\e92c";
+  color: rgb(27, 36, 61);
+}
+
+.apica-i-nose .path2:before {
+  content: "\e964";
+  margin-left: -1em;
+  color: rgb(27, 36, 61);
+  opacity: 0.48;
+}
+
+.apica-windy2:before {
+  content: "\e935";
+}
+
+.apica-comp:before {
+  content: "\e945";
+}
+
+.apica-hpa:before {
+  content: "\e94a";
+}
+
+.apica-drop:before {
+  content: "\e94c";
+}
+
+.apica-temp:before {
+  content: "\e900";
+}
+
+.apica-terrain:before {
+  content: "\e965";
+}
+
+.apica-iNose:before {
+  content: "\e951";
+}
+
+.apica-bollard:before {
+  content: "\e92b";
+}
+
+.apica-building:before {
+  content: "\e930";
+}
+
+.apica-dock:before {
+  content: "\e931";
+}
+
+.apica-driftwood:before {
+  content: "\e932";
+}
+
+.apica-drinking-water:before {
+  content: "\e933";
+}
+
+.apica-fence:before {
+  content: "\e934";
+}
+
+.apica-Frame-33:before {
+  content: "\e936";
+}
+
+.apica-gate:before {
+  content: "\e937";
+}
+
+.apica-haalkom:before {
+  content: "\e938";
+}
+
+.apica-Ladder:before {
+  content: "\e939";
+}
+
+.apica-lighting:before {
+  content: "\e93a";
+}
+
+.apica-lighting-2 .path1:before {
+  content: "\e93b";
+  color: rgb(27, 36, 61);
+}
+
+.apica-lighting-2 .path2:before {
+  content: "\e93c";
+  margin-left: -1em;
+  color: rgb(27, 36, 61);
+}
+
+.apica-lighting-2 .path3:before {
+  content: "\e93d";
+  margin-left: -1em;
+  color: rgb(27, 36, 61);
+  opacity: 0.64;
+}
+
+.apica-lighting-2 .path4:before {
+  content: "\e93e";
+  margin-left: -1em;
+  color: rgb(27, 36, 61);
+  opacity: 0.64;
+}
+
+.apica-lighting-2 .path5:before {
+  content: "\e93f";
+  margin-left: -1em;
+  color: rgb(27, 36, 61);
+  opacity: 0.64;
+}
+
+.apica-lighting-2 .path6:before {
+  content: "\e940";
+  margin-left: -1em;
+  color: rgb(27, 36, 61);
+  opacity: 0.64;
+}
+
+.apica-lighting-2 .path7:before {
+  content: "\e941";
+  margin-left: -1em;
+  color: rgb(27, 36, 61);
+  opacity: 0.64;
+}
+
+.apica-lock:before {
+  content: "\e942";
+}
+
+.apica-pipe:before {
+  content: "\e943";
+}
+
+.apica-quay-wall:before {
+  content: "\e944";
+}
+
+.apica-safety-ring:before {
+  content: "\e946";
+}
+
+.apica-scaffold:before {
+  content: "\e947";
+}
+
+.apica-sewage:before {
+  content: "\e948";
+}
+
+.apica-shore:before {
+  content: "\e949";
+}
+
+.apica-tech-water:before {
+  content: "\e94b";
+}
+
+.apica-waste-disposal-site:before {
+  content: "\e94d";
+}
+
+.apica-vessel:before {
+  content: "\e94e";
+}
+
+.apica-vessel-2:before {
+  content: "\e94f";
+}
+
+.apica-rainy:before {
+  content: "\e919";
+}
+
+.apica-wind-NO:before {
+  content: "\e923";
+}
+
+.apica-windy:before {
+  content: "\e924";
+}
+
+.apica-more:before {
+  content: "\e901";
+}
+
+.apica-play:before {
+  content: "\e902";
+}
+
+.apica-playx10:before {
+  content: "\e903";
+}
+
+.apica-replay:before {
+  content: "\e904";
+}
+
+.apica-replayx10:before {
+  content: "\e905";
+}
+
+.apica-delete:before {
+  content: "\e906";
+  color: #ff4747;
+}
+
+.apica-plugged-false:before {
+  content: "\e907";
+}
+
+.apica-plugged-true:before {
+  content: "\e908";
+}
+
+.apica-add-bookmark:before {
+  content: "\e909";
+}
+
+.apica-bridge-closed .path1:before {
+  content: "\e90a";
+  color: rgb(27, 36, 61);
+  opacity: 0.48;
+}
+
+.apica-bridge-closed .path2:before {
+  content: "\e950";
+  margin-left: -1em;
+  color: rgb(27, 36, 61);
+}
+
+.apica-bridge-open .path1:before {
+  content: "\e90b";
+  color: rgb(27, 36, 61);
+  opacity: 0.48;
+}
+
+.apica-bridge-open .path2:before {
+  content: "\e90c";
+  margin-left: -1em;
+  color: rgb(27, 36, 61);
+}
+
+.apica-camera:before {
+  content: "\e90d";
+}
+
+.apica-fender:before {
+  content: "\e90e";
+}
+
+.apica-filter:before {
+  content: "\e90f";
+}
+
+.apica-fullscreen:before {
+  content: "\e910";
+}
+
+.apica-fullscreen-exit:before {
+  content: "\e911";
+}
+
+.apica-bollard1:before {
+  content: "\e912";
+}
+
+.apica-mode-dark:before {
+  content: "\e913";
+}
+
+.apica-mode-light:before {
+  content: "\e914";
+}
+
+.apica-my-location:before {
+  content: "\e915";
+}
+
+.apica-notifications:before {
+  content: "\e916";
+}
+
+.apica-notifications-new .path1:before {
+  content: "\e917";
+  color: rgb(27, 36, 61);
+}
+
+.apica-notifications-new .path2:before {
+  content: "\e918";
+  margin-left: -1em;
+  color: rgb(255, 71, 71);
+}
+
+.apica-reddingkast:before {
+  content: "\e91a";
+}
+
+.apica-ships:before {
+  content: "\e91b";
+}
+
+.apica-sluis:before {
+  content: "\e91c";
+}
+
+.apica-status-nok:before {
+  content: "\e91d";
+}
+
+.apica-status-ok:before {
+  content: "\e91e";
+}
+
+.apica-terrain-view:before {
+  content: "\e91f";
+}
+
+.apica-timestamp:before {
+  content: "\e920";
+}
+
+.apica-under-construction:before {
+  content: "\e921";
+}
+
+.apica-walstroomkast:before {
+  content: "\e922";
+}
+
+.apica-zoom-in:before {
+  content: "\e925";
+}
+
+.apica-zoom-out:before {
+  content: "\e926";
+}
+
+.apica-home:before {
+  content: "\e92f";
+}
+
+.apica-pause_circle_filled:before {
+  content: "\e92d";
+}
+
+.apica-play_arrow:before {
+  content: "\e92e";
+}
